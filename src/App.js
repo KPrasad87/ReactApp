@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import User from './user';
+import Hello from './Hello';
+
 
 class App extends Component {
+
+   onSubmit = () => {
+    this.props.history.push('/users')
+  }
   render() {
     return (
       <div className="App">
@@ -13,6 +20,14 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+       
+        <Hello/>
+
+        <form>
+        <input placeholder="name" type="name" />
+        <input placeholder="email" type="email" />
+        <button onClick={this.onSubmit}>Submit</button>
+      </form>
       </div>
     );
   }
