@@ -8,6 +8,9 @@ import reducer from './redux/sampleredux';
 import { createStore, applyMiddleware } from 'redux';
 import { logger } from 'redux-logger';
 import rootSaga from './redux/sagas';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Example from './reactselect/example2'
 
 import createSagaMiddleware from 'redux-saga';
 
@@ -20,5 +23,7 @@ export const store = createStore(
  sagaMiddleware.run(rootSaga);
 
 
-ReactDOM.render(<Provider store ={store}><App/></Provider>, document.getElementById('root'));
+//ReactDOM.render(<Provider store ={store}><App/></Provider>, document.getElementById('root'));
+
+ReactDOM.render(<Example/>,document.getElementById('root'));
 registerServiceWorker();

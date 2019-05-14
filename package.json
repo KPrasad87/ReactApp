@@ -3,14 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "ag-grid-community": "^20.2.0",
+    "ag-grid-react": "^20.2.0",
     "axios": "^0.18.0",
+    "bootstrap": "^4.3.1",
+    "date-fns": "^1.30.1",
+    "moment": "^2.24.0",
     "react": "^16.4.2",
+    "react-datepicker": "^2.5.0",
     "react-dom": "^16.4.2",
+    "react-helmet": "^5.2.1",
+    "react-moment": "^0.9.2",
     "react-redux": "^5.1.1",
     "react-scripts": "1.1.5",
+    "react-select": "^2.4.3",
+    "react-slug": "^0.1.2",
+    "reactstrap": "^8.0.0",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
-    "redux-saga": "^1.0.2"
+    "redux-saga": "^1.0.2",
+    "yup": "0.24.1"
   },
   "scripts": {
     "start": "react-scripts start",
