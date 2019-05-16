@@ -11,6 +11,7 @@ import rootSaga from './redux/sagas';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Example from './reactselect/example2'
+import Allreactstrap from  './reactstrap/allreactstrap'
 
 import createSagaMiddleware from 'redux-saga';
 
@@ -25,5 +26,5 @@ export const store = createStore(
 
 //ReactDOM.render(<Provider store ={store}><App/></Provider>, document.getElementById('root'));
 
-ReactDOM.render(<Example/>,document.getElementById('root'));
+ReactDOM.render(<Allreactstrap/>,document.getElementById('root'));
 registerServiceWorker();

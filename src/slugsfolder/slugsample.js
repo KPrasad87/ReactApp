@@ -1,5 +1,5 @@
-import React from 'react'
-import Slug from 'react-slug'
+import React from 'react';
+import Slug from 'react-slug';
  
 class slugsample extends React.Component{
  
