@@ -1,5 +1,13 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+#india
+{
+background-color: green;
+color: yellow;
+font-weight: bold;
+}
+
+:local(.container)
+
+{
+	background-color:pink;
+	font-weight: bold;
 }
