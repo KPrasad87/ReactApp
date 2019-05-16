@@ -7,8 +7,26 @@ import Hello from './Hello';
 
 class App extends Component {
 
-   onSubmit = () => {
-    this.props.history.push('/users')
+  constructor(props)
+  {
+    super(props);
+    this.state={
+
+      user:"",
+      pwd:""
+    }
+  }
+
+   onSubmit = (event) => {
+    // this.props.history.push('/users')
+
+    event.preventDefault();
+   var username= event.target.user.value;
+   var pwd = event.target.pwd.value;
+   this.setState({user:username,pwd:pwd});
+   this.props.history.push('/home')
+
+
   }
   render() {
     return (
@@ -21,13 +39,20 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
        
-        <Hello/>
+        
 
-        <form>
-        <input placeholder="name" type="name" />
-        <input placeholder="email" type="email" />
-        <button onClick={this.onSubmit}>Submit</button>
+        <form onSubmit={this.onSubmit}>
+        <input placeholder="name" type="name" name="user"/>
+        <br/>
+        <input placeholder="pwd" type="pwd"  name="pwd"/>
+        <br/>
+        <input type="submit" value="submit"/>
       </form>
+      
+      {this.state.username!=null?true:false}
+      <Hello user={this.state.user}/>
+
+
       </div>
     );
   }
